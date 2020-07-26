@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<meta name="description" content="Calculadora IVA CR"/>
+			<meta name="Abstract" content="Calculadora IVA CR"/>
+			<meta name="robots" content="index, follow"/>
+			<meta name="googlebot" content="index, follow"/>
+			<meta name="Language" content="Español"/>
+			<meta name="Distribution" content="Global"/>
+			<meta name="owner" content="Calculadora IVA CR"/>
+			<meta name="keywords" content="Calculadora IVA CR"/>
+			<title>Calculadora IVA CR</title>
+			<!-- CSS  -->
+			<link href="./resources/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+			<link href="./resources/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		</head>
+		<body id="body">
+			<nav class="rbc-primary" role="navigation">
+				<div class="nav-wrapper container">
+					<a id="logo-container" href="#" class="brand-logo white-text">
+						Calculadora IVA CR
+					</a>
+					<ul class="right hide-on-med-and-down">
+						<li>
+							<a class="white-text" href="#body">Inicio</a>
+						</li>
+					</ul>
+					<ul id="nav-mobile" class="sidenav rbc-primary" style="transform: translateX(-105%);">
+						<li class="logo-sidenav-container">
+							Calculadora IVA CR
+						</li>
+						<li>
+							<a class="white-text" href="#body">Inicio</a>
+						</li>
+					</ul>
+					<a href="#" data-target="nav-mobile" class="sidenav-trigger white-text">
+						<i class="material-icons">menu</i>
+					</a>
+				</div>
+			</nav>
+			<div id="index-banner" class="parallax-container parallax-container-main">
+				<div class="section no-pad-bot">
+					
+				</div>
+				<div class="parallax">
+					<img src="./resources/images/main_image.jpg" alt="Imagen ilustrativa de calculo de iva" style="transform: translate3d(-50%, 242.633px, 0px); opacity: 1;"/>
+				</div>
+			</div>
+			<div class="container" id="facturacion">
+				<div class="section">
+					<div class="container">
+						<h1 class="header center  ">Calculadora IVA CR</h1>
+						<div class="row center">
+							<p class="header col s12 light">Calcule el total de los impuestos para las facturas de compra y venta que ha realizado,
+							para presentar su declaración.</p>
+							<p class="header col s12 light">
+							Esta herramienta no guarda ningún dato, ya que todos los cálculos los realiza del lado del cliente para garantizar mantener la privacidad de los datos contenidos en los archivos.
+							Por favor no confíe completamente en este cálculo ya que depende de la estructura que utilice la plataforma del Ministerio de Hacienda al momento del desarrollo.
+							Además no pretende sustituir la suma o revisión de los montos, simplemente es una herramienta de apoyo para verificar.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 center">
+							<div class="row">
+								<h2>Subir archivos</h2>
+								<p class="header col s12 light">Seleccione los archivos .xml de las facturas (recuerde que puede tener dos archivos xml uno de la factura y 
+								otra de la confirmación de aceptación, para este caso solo requiere el xml de la factura)  
+								<br /><br /></p>
+								<input type="file" id="fileUpload" multiple="true"/>
+								<input type="button" id="upload" value="Subir archivos y calcular IVA"/>
+								
+								<br />
+								<br />
+								
+								<div id="calculado">
+								
+								
+									<div id="suma_subtotal">
+										<h3>Suma de subtotal sin IVA</h3>
+										<table id="tabla_suma_subtotal" class="responsive-table">
+											<thead>
+												<tr>
+													<th class="number_column">0%</th>
+													<th class="number_column">1%</th>
+													<th class="number_column">2%</th>
+													<th class="number_column">4%</th>
+													<th class="number_column">8%</th>
+													<th class="number_column">13%</th>
+													<th class="number_column">Total</th>
+												</tr>
+											</thead>
+											<tbody id="tabla_suma_subtotal_contenido">
+											</tbody>
+										</table>
+									</div>
+									
+									<br />
+									<br />
+									
+									<div id="suma_impuestos">
+										<h3>Suma de IVA</h3>
+										<table id="tabla_suma_impuestos" class="responsive-table">
+											<thead>
+												<tr>
+													<th class="number_column">0%</th>
+													<th class="number_column">1%</th>
+													<th class="number_column">2%</th>
+													<th class="number_column">4%</th>
+													<th class="number_column">8%</th>
+													<th class="number_column">13%</th>
+													<th class="number_column">Total</th>
+												</tr>
+											</thead>
+											<tbody id="tabla_suma_impuestos_contenido">
+											</tbody>
+										</table>
+									</div>
+									
+									<br />
+									<br />
+									
+									
+									
+									<div id="suma_total">
+										<h3>Suma total con IVA</h3>
+										<table id="tabla_suma_total" class="responsive-table">
+											<thead>
+												<tr>
+													<th class="number_column">0%</th>
+													<th class="number_column">1%</th>
+													<th class="number_column">2%</th>
+													<th class="number_column">4%</th>
+													<th class="number_column">8%</th>
+													<th class="number_column">13%</th>
+													<th class="number_column">Total</th>
+												</tr>
+											</thead>
+											<tbody id="tabla_suma_total_contenido">
+											</tbody>
+										</table>
+									</div>
+									
+									<br />
+									<br />
+									
+									<h3>Detalle de facturas</h3>
+									<div id="detalle_facturas">
+										<table id="tabla_detalles" class="responsive-table">
+											<thead>
+												<tr>
+													<th width="10%">Emisor</th>
+													<th>NumeroConsecutivo</th>
+													<th>Detalle</th>
+													<th class="number_column">SubTotal</th>
+													<th class="number_column">ImpuestoTarifa</th>
+													<th class="number_column">ImpuestoNeto</th>
+													<th class="number_column">MontoTotalLinea</th>
+												</tr>
+											</thead>
+											<tbody id="tabla_detalles_contenido">
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax-container valign-wrapper">
+				<div class="section no-pad-bot">
+					<div class="container">
+						<div class="row center">
+							<h3 class="header col s12 light"/>
+						</div>
+					</div>
+				</div>
+				<div class="parallax">
+					<img src="./resources/images/main_image.jpg" alt="Imagen ilustrativa de calculo de iva" style="transform: translate3d(-50%, 8.75937px, 0px); opacity: 1;"/>
+				</div>
+			</div>
+			<footer class="page-footer rbc-primary">
+				<div class="container">
+					<div class="row">
+						<div class="col l6 s12" id="quienessomos">
+							<h3 class="white-text">Quienes somos</h3>
+							<p class="grey-text text-lighten-4">
+								Somos un grupo de costarricenses que cansados de sumar a mano los montos de iva para las declaraciones propias y de familiares,
+								decidieron desarrollar y compartir una herramienta sencilla para los trabajadores independientes y de pequeña empresa
+								para facilitar el calculo. No nos hacemos responsables del uso de esta herramienta.
+							</p>
+						</div>
+						<div class="col l6 s12" id="donaciones" align="right">
+							<h3 class="white-text">Donaciones</h3>
+							<p class="grey-text text-lighten-4">
+							El código de esta herramienta puede ser encontrada en 
+								Si desean pueden ayudar con el costo mensual del hosting por medio de sinpemovil 88193630.
+							</p>
+						</div>						
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="container">
+						rbc - 2020
+					</div>
+				</div>
+			</footer>
+			<div class="sidenav-overlay" style="display: none; opacity: 0;"></div>
+			<div class="drag-target"></div>
+			<!--  Scripts-->
+			<script src="./resources/js/jquery-2.1.1.min.js"></script>
+			<script src="./resources/js/materialize.js"></script>
+			<script src="./resources/js/init.js"></script>
+			<script src="./resources/js/calculadora_iva.js"></script>
+		</body>
+	</html>

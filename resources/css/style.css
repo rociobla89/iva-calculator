@@ -1,0 +1,171 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ 
+ 
+ @font-face {
+    font-family: "Helvetica LT Std Bold";
+    src: url("../fonts/HelveticaLTStd-Bold.otf") format("opentype");
+}
+
+ @font-face {
+    font-family: "AvantGarde Normal";
+    src: url("../fonts/AVANTN.ttf") format("truetype");
+}
+
+
+ @font-face {
+    font-family: "Century Gothic Regular";
+    src: url("../fonts/CenturyGothicRegular.ttf") format("truetype");
+}
+
+h1{
+	font-family: "Helvetica LT Std Bold";
+}
+
+h2 {	
+   font-family: "Century Gothic Regular";
+}
+
+h3 {	
+   font-family: "Century Gothic Regular";
+    font-size: 1.5rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+	font-weight: lighter; 
+}
+
+.row.lista-servicios{
+	margin-bottom: 0px;
+}
+
+.servicio{
+	padding: 15px;
+}
+
+p.header{
+	font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;	
+}
+
+.rbc-primary-text{
+	color: #02323a;	
+}
+
+.rbc-primary{
+	background-color: #02323a;	
+}
+
+nav{	
+	position:fixed;
+	z-index:10000;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 280px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container-main {
+  min-height: 300px;
+}
+
+  .parallax-container .section {
+    width: 100%;
+	padding-top: 5em;
+  }
+
+
+
+
+@media only screen and (min-width: 601px){
+	.container {
+		width: 85%;
+	}
+}
+
+@media only screen and (min-width: 993px){
+	.container {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+a .redes{
+	font-size: 3em;	
+	padding:0.1em;
+}
+
+#logo{
+	border: 1px solid #dedede;
+	background: white;
+}
+
+#logo-sidenav{
+	border: none;
+	background: #ff5f03;
+}
+
+.logo-sidenav-container{
+	text-align:center;
+}
+
+a.sidenav-trigger{
+	margin:0px 5px;
+}
+
+.parallax img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.number_column{
+    text-align:right;
+	width: 14%;
+}
